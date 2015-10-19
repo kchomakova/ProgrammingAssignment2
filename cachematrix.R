@@ -3,7 +3,8 @@
 
 ## The function makeCacheMatrix takes as a single argument an invertible matrix and stores a list of four other 
 ## functions that are supposed to: reset the value of the matrix in the main function; get (return) the value of
-## the main function's argument; cache the value of the inverse matrix and return the value of the inverse matrix.
+## the main function's argument; cache the value of the inverse matrix(setInvMtx) and return the value of the 
+##inverse matrix(getInvMtx).
 
 makeCacheMatrix <- function(x = matrix()) {
         InvMtx <- NULL
@@ -25,7 +26,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## The function cacheSolve takes as an argument an object where makeCacheMatrix is stored and then does the following:
 ## returns the value for the inverse matrix stored by makeCacheMatrix$setInvMtx(k); 
-## he value is NULL, the inverse mateix is calculated, stored and returned.
+## If the value is NULL, the inverse matrix is calculated, stored and returned.
 
 cacheSolve <- function(x, ...) {
         InvMtx <- x$getInvMtx()
